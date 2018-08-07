@@ -16,16 +16,13 @@ public class Info extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        //Get the information of the clicked on entry from the fragment.
-
         Intent details = getIntent();
         List ls = details.getParcelableExtra(getResources().getString(R.string.list));
 
-        int img = ls.getmEntryPicutreId();
-        int name = ls.getmEntryNameId();
-        int info = ls.getmEntryInfoId();
+        int img = ls.getmFullImage();
+        int name = ls.getmTitle();
+        int info = ls.getmInfo();
 
-        //Set the image and strings from the array in the views of the layout.
         ImageView fullImgId = findViewById(R.id.about_image);
         fullImgId.setImageResource(img);
 
@@ -36,8 +33,6 @@ public class Info extends AppCompatActivity {
         fullInfo.setText(info);
     }
 
-    // Modify the Up-Button so that it behaves like the Back-Button includes code from:
-    //https://stackoverflow.com/questions/22947713/make-the-up-button-behave-like-the-back-button-on-android
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int i = item.getItemId();

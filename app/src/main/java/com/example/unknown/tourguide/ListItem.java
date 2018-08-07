@@ -1,7 +1,6 @@
 package com.example.unknown.tourguide;
 
 import android.app.Activity;
-import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -32,10 +31,10 @@ public class ListItem extends ArrayAdapter<List>{
         List currentList = getItem(position);
 
         TextView entryNameTextView = listItemView.findViewById(R.id.list_text);
-        entryNameTextView.setText(currentList.getmEntryIconId());
+        entryNameTextView.setText(currentList.getmTitle());
 
         ImageView entryImageView = listItemView.findViewById(R.id.list_image);
-        entryImageView.setImageResource(currentList.getmEntryNameId());
+        entryImageView.setImageResource(currentList.getmSmallImage());
 
         return listItemView;
     }

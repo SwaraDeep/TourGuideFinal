@@ -1,9 +1,5 @@
 package com.example.unknown.tourguide;
 
-//Implement Parcelable to send information to other activities. More information and code about
-// implementing Parcelable can be found in this tutorial:
-// https://www.youtube.com/watch?v=WBbsvqSu0is
-
 import android.os.Parcel;
 import android.os.Parcelable;
 
@@ -19,39 +15,39 @@ public class List implements Parcelable {
             return new List[size];
         }
     };
-    private int mEntryNameId;
-    private int mEntryPictureId;
-    private int mEntryIconId;
-    private int mEntryInfoId;
+    private int mTitle;
+    private int mFullImage;
+    private int mSmallImage;
+    private int mInfo;
 
 
     public List(int entryNameId, int entryPictureId, int entryIconId, int entryInfoId) {
-        mEntryNameId = entryNameId;
-        mEntryPictureId = entryPictureId;
-        mEntryIconId = entryIconId;
-        mEntryInfoId = entryInfoId;
+        mTitle = entryNameId;
+        mFullImage = entryPictureId;
+        mSmallImage = entryIconId;
+        mInfo = entryInfoId;
     }
 
     protected List(Parcel in) {
-        mEntryNameId = in.readInt();
-        mEntryPictureId = in.readInt();
-        mEntryInfoId = in.readInt();
+        mTitle = in.readInt();
+        mFullImage = in.readInt();
+        mInfo = in.readInt();
     }
 
-    public int getmEntryNameId() {
-        return mEntryNameId;
+    public int getmTitle() {
+        return mTitle;
     }
 
-    public int getmEntryPicutreId() {
-        return mEntryPictureId;
+    public int getmFullImage() {
+        return mFullImage;
     }
 
-    public int getmEntryIconId() {
-        return mEntryIconId;
+    public int getmSmallImage() {
+        return mSmallImage;
     }
 
-    public int getmEntryInfoId() {
-        return mEntryInfoId;
+    public int getmInfo() {
+        return mInfo;
     }
 
     @Override
@@ -61,8 +57,8 @@ public class List implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel parcel, int i) {
-        parcel.writeInt(mEntryNameId);
-        parcel.writeInt(mEntryPictureId);
-        parcel.writeInt(mEntryInfoId);
+        parcel.writeInt(mTitle);
+        parcel.writeInt(mFullImage);
+        parcel.writeInt(mInfo);
     }
 }

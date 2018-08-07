@@ -22,9 +22,9 @@ public class ItemAdapter extends FragmentPagerAdapter {
         } else if (i == 2) {
             return new HotelFragment();
         } else if (i == 3) {
-            return new AboutFragment();
+            return new RestaurantsFragment();
         } else
-            return new AboutFragment();
+            return new HospitalsFragment();
     }
 
     @Override

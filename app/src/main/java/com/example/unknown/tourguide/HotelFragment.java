@@ -1,8 +1,9 @@
 package com.example.unknown.tourguide;
-import android.content.Context;
+
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,15 +16,10 @@ import java.util.ArrayList;
 
 public class HotelFragment extends Fragment {
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.list_view, container, false);
 
-        //Create an array of entries to display the village entries.
-        final ArrayList<List> list = new ArrayList<>();
-
-        //Add the different entries to the ArrayList
+        final ArrayList<List> list = new ArrayList<List>();
 
         list.add(new List(R.drawable.ic_main_drawer, R.drawable.ic_main_drawer, R.drawable.ic_main_drawer, R.string.list));
         list.add(new List(R.drawable.ic_main_drawer, R.drawable.ic_main_drawer, R.drawable.ic_main_drawer, R.string.list));
@@ -32,25 +28,20 @@ public class HotelFragment extends Fragment {
         list.add(new List(R.drawable.ic_main_drawer, R.drawable.ic_main_drawer, R.drawable.ic_main_drawer, R.string.list));
         list.add(new List(R.drawable.ic_main_drawer, R.drawable.ic_main_drawer, R.drawable.ic_main_drawer, R.string.list));
 
-        //Create a new Entryadapter
         ListItem adapter = new ListItem(getActivity(), list);
 
-        //Display the objects of the array in the ListView
-        ListView listView = rootView.findViewById(R.id.list);
+        ListView listView = (ListView) rootView.findViewById(R.id.list);
+
         listView.setAdapter(adapter);
 
-        //Set an on ItemClickListener on the views which display the entries.
-       /* listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                // The code in this method will be executed when an entry is clicked on.
-                Intent details = new Intent(getActivity(), AboutFragment.class);
-                // This line will send information from the entry to the Details.Activity
-                details.putExtra(getResources().getString(R.string.app_name), list.get(position));
-                startActivity(details);
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent intent = new Intent(getActivity(), Info.class);
+                intent.putExtra(getResources().getString(R.string.list), list.get(i));
+                startActivity(intent);
             }
-        });*/
-
+        });
         return rootView;
     }
 }
