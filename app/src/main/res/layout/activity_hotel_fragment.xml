@@ -7,25 +7,33 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="45dp"
-        android:padding="8dp"
         android:orientation="vertical">
 
         <ImageView
             android:id="@+id/about_image"
             android:layout_width="match_parent"
-            android:layout_height="200dp" />
+            android:layout_height="250dp"
+            android:scaleType="fitXY" />
 
         <TextView
             android:id="@+id/about_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="chbisghfdiasfsadfhfghn" />
+            android:gravity="center_horizontal"
+            android:padding="16dp"
+            android:text="chbisghfdiasfsadfhfghn"
+            android:textColor="@android:color/black"
+            android:textSize="32sp" />
+
         <TextView
+            android:id="@+id/full_info"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:padding="8dp"
             android:text="dsafgvbdjsv"
-            android:id="@+id/full_info"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
             tools:ignore="InvalidId" />
     </LinearLayout>
 </ScrollView>

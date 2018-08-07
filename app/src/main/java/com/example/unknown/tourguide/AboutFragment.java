@@ -19,8 +19,8 @@ public class AboutFragment extends Fragment {
         ImageView iv = rootView.findViewById(R.id.about_image);
         TextView tv = rootView.findViewById(R.id.about_text);
 
-        iv.setImageResource(R.drawable.ic_launcher_background);
-        tv.setText("hello rjy");
+        iv.setImageResource(R.drawable.ic_main_drawer);
+        tv.setText(R.string.name);
         return rootView;
     }
 }

@@ -2,30 +2,38 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_marginTop="45dp"
     android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="8dp"
+        android:gravity="center_horizontal"
         android:orientation="vertical">
 
         <ImageView
             android:id="@+id/about_image"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="250dp"
+            android:gravity="center_horizontal"
+            android:scaleType="fitXY" />
 
         <TextView
             android:id="@+id/about_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="chbisghfdiasfsadfhfghn" />
+            android:gravity="center_horizontal"
+            android:paddingTop="25dp"
+            android:textColor="@android:color/black"
+            android:textSize="32sp" />
+
         <TextView
+            android:id="@+id/full_info"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/full_info"
-            android:text="asdfgsdgvfdb"
+            android:padding="20dp"
+            android:text="@string/intro"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
             tools:ignore="InvalidId" />
     </LinearLayout>
 </ScrollView>

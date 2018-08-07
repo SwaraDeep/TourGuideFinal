@@ -20,12 +20,11 @@ public class RestaurantsFragment extends Fragment {
 
         final ArrayList<List> list = new ArrayList<List>();
 
-        list.add(new List(R.drawable.ic_main_drawer, R.drawable.ic_main_drawer, R.drawable.ic_main_drawer, R.string.list));
-        list.add(new List(R.drawable.ic_main_drawer, R.drawable.ic_main_drawer, R.drawable.ic_main_drawer, R.string.list));
-        list.add(new List(R.drawable.ic_main_drawer, R.drawable.ic_main_drawer, R.drawable.ic_main_drawer, R.string.list));
-        list.add(new List(R.drawable.ic_main_drawer, R.drawable.ic_main_drawer, R.drawable.ic_main_drawer, R.string.list));
-        list.add(new List(R.drawable.ic_main_drawer, R.drawable.ic_main_drawer, R.drawable.ic_main_drawer, R.string.list));
-        list.add(new List(R.drawable.ic_main_drawer, R.drawable.ic_main_drawer, R.drawable.ic_main_drawer, R.string.list));
+        list.add(new List(R.string.res_avakai, R.drawable.res_avakai, R.drawable.res_avakai, R.string.res_info_avakai));
+        list.add(new List(R.string.res_dfc, R.drawable.res_dfc, R.drawable.res_dfc, R.string.res_info_dfc));
+        list.add(new List(R.string.res_shelton, R.drawable.res_shelton, R.drawable.res_shelton, R.string.res_info_shelton));
+        list.add(new List(R.string.res_sri_kanya, R.drawable.res_sri_kanya, R.drawable.res_sri_kanya, R.string.res_info_shelton));
+        list.add(new List(R.string.res_venky, R.drawable.res_venky, R.drawable.res_venky, R.string.res_info_venky));
 
         ListItem adapter = new ListItem(getActivity(), list);
 

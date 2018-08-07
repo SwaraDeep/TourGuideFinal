@@ -20,12 +20,10 @@ public class HotelFragment extends Fragment {
 
         final ArrayList<List> list = new ArrayList<List>();
 
-        list.add(new List(R.drawable.ic_main_drawer, R.drawable.ic_main_drawer, R.drawable.ic_main_drawer, R.string.list));
-        list.add(new List(R.drawable.ic_main_drawer, R.drawable.ic_main_drawer, R.drawable.ic_main_drawer, R.string.list));
-        list.add(new List(R.drawable.ic_main_drawer, R.drawable.ic_main_drawer, R.drawable.ic_main_drawer, R.string.list));
-        list.add(new List(R.drawable.ic_main_drawer, R.drawable.ic_main_drawer, R.drawable.ic_main_drawer, R.string.list));
-        list.add(new List(R.drawable.ic_main_drawer, R.drawable.ic_main_drawer, R.drawable.ic_main_drawer, R.string.list));
-        list.add(new List(R.drawable.ic_main_drawer, R.drawable.ic_main_drawer, R.drawable.ic_main_drawer, R.string.list));
+        list.add(new List(R.string.hot_shelton, R.drawable.hot_shelton, R.drawable.hot_shelton, R.string.hot_info_shelton));
+        list.add(new List(R.string.hot_sitara, R.drawable.hot_sitara, R.drawable.hot_sitara, R.string.hot_info_sitara));
+        list.add(new List(R.string.hot_sri_grands, R.drawable.hot_sri_grands, R.drawable.hot_sri_grands, R.string.hot_info_sri_grands));
+        list.add(new List(R.string.hot_venky, R.drawable.hot_venky, R.drawable.hot_venky, R.string.hot_info_venky));
 
         ListItem adapter = new ListItem(getActivity(), list);
 

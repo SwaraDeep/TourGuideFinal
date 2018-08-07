@@ -21,11 +21,11 @@ public class List implements Parcelable {
     private int mInfo;
 
 
-    public List(int entryNameId, int entryPictureId, int entryIconId, int entryInfoId) {
-        mTitle = entryNameId;
-        mFullImage = entryPictureId;
-        mSmallImage = entryIconId;
-        mInfo = entryInfoId;
+    public List(int title, int fullImage, int icon, int info) {
+        mTitle = title;
+        mFullImage = fullImage;
+        mSmallImage = icon;
+        mInfo = info;
     }
 
     protected List(Parcel in) {
