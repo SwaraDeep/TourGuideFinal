@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">TourGuide</string>
     <string name="list">list</string>
+    <string name="bridge"></string>
 </resources>
