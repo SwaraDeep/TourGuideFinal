@@ -1,11 +1,9 @@
 package com.example.unknown.tourguide;
 
+import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-
-import static com.example.unknown.tourguide.R.id.tab_bar;
 
 public class MainActivity extends AppCompatActivity {
 

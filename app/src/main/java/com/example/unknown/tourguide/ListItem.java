@@ -12,11 +12,10 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class ListItem extends ArrayAdapter<List>{
+public class ListItem extends ArrayAdapter<List> {
 
     public ListItem(Activity context, ArrayList<List> pItems) {
         super(context, 0, pItems);
-
     }
 
     @NonNull

@@ -29,18 +29,18 @@ public class PlacesFragment extends Fragment {
 
         ListItem adapter = new ListItem(getActivity(), list);
 
-            ListView listView = (ListView) rootView.findViewById(R.id.list);
+        ListView listView = (ListView) rootView.findViewById(R.id.list);
 
-            listView.setAdapter(adapter);
+        listView.setAdapter(adapter);
 
-            listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                @Override
-                public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                    Intent intent = new Intent(getActivity(), Info.class);
-                    intent.putExtra(getResources().getString(R.string.list), list.get(i));
-                    startActivity(intent);
-                }
-            });
-            return rootView;
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent intent = new Intent(getActivity(), Info.class);
+                intent.putExtra(getResources().getString(R.string.list), list.get(i));
+                startActivity(intent);
+            }
+        });
+        return rootView;
     }
 }
